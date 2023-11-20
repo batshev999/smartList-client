@@ -1,0 +1,18 @@
+ 
+ :host::ng-deep.cdk-text-field-autofill-monitored{
+    border: 1px solid rgb(0 0 0 / 10%) !important;
+    border-radius: 4px !important;
+    /* align-items: start !important; */
+    color: #000000e3;
+    width: 5rem;
+    text-align: center;
+    height: 25px;
+    font-size: medium;
+    font-weight: 400;
+    font-family: system-ui;
+ }
+ label{
+    font-size: large;
+    font-family: system-ui;
+    font-weight: 500;
+ }

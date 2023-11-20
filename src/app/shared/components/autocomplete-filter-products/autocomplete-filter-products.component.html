@@ -1,0 +1,28 @@
+<!-- <div> <input [formControl]="searchControl" />חיפוש</div> -->
+
+<div class="coll">
+  <!-- <label>חיפוש </label> -->
+  <mat-form-field class="matFromField" appearance="fill">
+      <input matInput name="email" placeholder="חיפוש..." type="text" [formControl]="searchControl">
+  </mat-form-field>
+</div>
+<div *ngFor="let item of shopList.controls; let i = index">
+  <div [ngClass]="{'disable':!item.controls.disable.value}" [formGroup]="item">
+      <mat-checkbox (change)="onCheckboxChange(i)" formControlName="checked">{{item.controls.product.value?.productName}}</mat-checkbox>
+    <app-amount-product-in-shop-list formControlName="amount"></app-amount-product-in-shop-list>
+
+  </div>
+</div>
+ 
+<!-- {{ productList$|async|json}} -->
+<!-- <form [formGroup]="shopList">
+    <div *ngFor="let product of filteredOptions | async">
+      <mat-list-option>
+        <input
+          type="checkbox"
+          (change)="onOptionChange($event, product)"
+        >
+        {{ product.productName }}
+      </mat-list-option>
+    </div>
+  </form> -->

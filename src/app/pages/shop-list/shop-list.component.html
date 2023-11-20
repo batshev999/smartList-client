@@ -1,0 +1,67 @@
+<div class="warpShop">
+
+    <div class="warpLeftSide">
+
+        <div class="warpBtn">
+            <button class="btn btnBorder btnRight" pButton type="button" label="" (click)="addProduct()">
+                הוסף מוצר חדש
+            </button>
+            <button class="btn btnBorder btnLeft" pButton type="button" label="" (click)="saveList()">
+                שמירה
+            </button>
+        </div>
+
+        <div [formGroup]="myShopList">
+            <mat-checkbox formControlName="isUsedSatistic">האם ברצונך שקניה זו תכנס למאגר בשביל חישוב
+            </mat-checkbox>
+            <mat-card class="card">
+                <app-autocomplete-filter-products
+                    formControlName="productDetailsInShop"></app-autocomplete-filter-products>
+            </mat-card>
+        </div>
+    </div>
+    <div class="warpRightSide">
+
+        <div class="warpShopList">
+            <h1>רשימת הקניות שלי</h1>
+
+            <!-- {{shopList()?.productDetailsInShops|json}} -->
+            <!-- <mat-card>
+            {{shopList()?.productDetailsInShops|json}}
+        </mat-card> -->
+            <div class="warpList">
+                <mat-list>
+                    <mat-list-item *ngFor="let item of  shopList()?.productDetailsInShops">
+                        <div class="warpIcon"><img class="imgIcon" src="assets/listLine.png"></div>
+                        <div class="warpItem">{{item.amount}} {{item.productName}}</div>
+                    </mat-list-item>
+                </mat-list>
+            </div>
+            <!-- <img class="img" src="assets/logo.png"> -->
+        </div>
+
+
+
+
+        <!-- <button (click)="addProduct()">הוסף מוצר חדש</button>
+        <button (click)="saveList()">שמירה</button> -->
+        <!-- <mat-card>
+            <mat-card-header>
+                <mat-card-title>רשימת הקניות שלי </mat-card-title>
+                
+            </mat-card-header>
+            <mat-card-content>
+                <div [formGroup]="myShopList">
+                    <mat-checkbox formControlName="isUsedSatistic">האם ברצונך שקניה זו תכנס למאגר בשביל חישוב
+                    </mat-checkbox>
+                    <app-autocomplete-filter-products
+                        formControlName="productDetailsInShop"></app-autocomplete-filter-products>
+                </div>
+            </mat-card-content>
+            <mat-card-actions>
+                <button (click)="addProduct()">הוסף מוצר חדש</button>
+                <button (click)="saveList()">שמירה</button>
+            </mat-card-actions>
+        </mat-card> -->
+    </div>
+</div>

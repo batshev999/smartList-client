@@ -1,0 +1,68 @@
+<div class="warpPage">
+    <div class="warpLogin">
+        <div class="warpCenter">
+           
+            <div>
+                <div class="title">
+                    <div>עוד כמה צעדים ואתה בפנים :)</div>
+                    <div> נא הכנס את פרטיך האישיים - </div>
+
+                </div>
+
+                <div class="warp">
+                    <form [formGroup]="userForm">
+                        <div class="coll">
+                            <label>שם משתמש </label>
+                            <mat-form-field class="matFromField" appearance="fill">
+                                <input matInput name="userName" type="text" formControlName="userName">
+                            </mat-form-field>
+                        </div>
+                        <div class="coll">
+                            <label>שם פרטי </label>
+                            <mat-form-field class="matFromField" appearance="fill">
+                                <input matInput name="firstName" type="text" formControlName="firstName">
+                            </mat-form-field>
+                        </div>
+                        <div class="coll">
+                            <label>שם משפחה </label>
+                            <mat-form-field class="matFromField" appearance="fill">
+                                <input matInput name="lastName" type="text" formControlName="lastName">
+                            </mat-form-field>
+                        </div>
+                        <div class="coll">
+                            <label>אימייל</label>
+                            <mat-form-field class="matFromField" appearance="fill">
+                                <input matInput name="email" type="text" formControlName="email">
+                            </mat-form-field>
+                        </div>
+                        <div class="warpBtn">
+                            <button class="btn btnBorder" pButton type="button" label="" (click)="register()">
+                                הרשמה
+                            </button>
+                        </div>
+                        <!-- <div>
+שם משתמש:
+<input formControlName="userName" />
+</div> 
+         <div>
+            שם פרטי:
+            <input formControlName="firstName" />
+        </div>
+        <div>
+            שם משפחה
+            <input formControlName="lastName" />
+        </div> 
+        <div>
+            אמייל:
+            <input formControlName="email" />
+        </div>-->
+                        <!-- <button (click)="register()"> הרשמה</button> -->
+                    </form>
+                </div>
+            </div>
+            <div class="warpImg">
+                <img class="img" src="assets/logo.png">
+            </div>
+        </div>
+    </div>
+</div>

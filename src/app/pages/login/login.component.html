@@ -1,0 +1,44 @@
+<div class="warpPage">
+    <div class="warpLogin">
+
+        <div>
+            <div class="title">
+                <div>ברוך/ה הבא/ה!</div>
+                <div>אנו שמחים שבחרת להשתמש באפליקציה החכמה שלנו.</div>
+                <div>בטוחים שתהנה!</div>
+
+            </div>
+            <div class="warp">
+                <div class="warpTitle">
+                    <h1> כניסה</h1>
+                    <div>
+                        <img class="img" src="assets/logo.png">
+                    </div>
+                </div>
+                <form [formGroup]="userForm">
+
+                    <div class="coll">
+                        <label>אימייל </label>
+                        <mat-form-field class="matFromField" appearance="fill">
+                            <input matInput name="email" type="text" formControlName="email">
+                        </mat-form-field>
+                    </div>
+                    <div class="warpBtn">
+                        <button class="btn btnBorder" pButton type="button" label="" (click)="login()">
+                            התחבר
+                        </button>
+                    </div>
+                    <div class="linkRegister">
+                        <a routerLink="/register">אם אינך רשום</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div>
+                אמייל:
+                <input formControlName="email" />
+            </div> 
+            <button (click)="login()"> התחבר</button>-->

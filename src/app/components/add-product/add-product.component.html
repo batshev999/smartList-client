@@ -1,0 +1,44 @@
+<div class="warp">
+  <div class="title">
+    <div>   <img class="img" src="assets/logo.png"></div>
+    <div> הוספת מוצר חדש</div>
+
+  </div>
+  <form [formGroup]="product">
+    <!-- <label>קטגוריה <input formControlName="categoryId" /></label> -->
+    <!-- {{categoryList|json}} -->
+    <label>קטגוריה
+      <app-single_autocomplete-filter formControlName="categoryId"
+        [autoCompleteList]="categoryList"></app-single_autocomplete-filter>
+    </label>
+
+    <!-- <label>חברה <input formControlName="companyId" /></label> -->
+    <!-- {{comanyList|json}} -->
+    <label>חברה
+      <app-single_autocomplete-filter formControlName="companyId"
+        [autoCompleteList]="comanyList"></app-single_autocomplete-filter>
+
+    </label>
+    <div class="coll">
+      <label>שם</label>
+      <mat-form-field class="matFromField" appearance="fill">
+        <input matInput name="productName" type="text" formControlName="productName">
+      </mat-form-field>
+    </div>
+    <div class="coll">
+      <label>סוג משקל</label>
+      <mat-form-field class="matFromField" appearance="fill">
+        <input matInput name="weightType" type="text" formControlName="weightType">
+      </mat-form-field>
+    </div>
+    <!-- <label>שם <input formControlName="productName" /></label> -->
+    <!-- <br />
+  <label>סוג משקל <input formControlName="weightType" /></label> -->
+  </form>
+  <!-- <button (click)="add()">הוסף</button> -->
+  <div class="warpBtn">
+    <button class="btn btnBorder" pButton type="button" label="" (click)="add()">
+      הוסף
+    </button>
+  </div>
+</div>
